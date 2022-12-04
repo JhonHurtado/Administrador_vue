@@ -1,20 +1,92 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
+
+/* Views importados*/
+
+import ConductoresView from '../views/ConductoresView.vue'
+import solicitudConductores from '../views/solicitudConductores.vue'
+import datosConductor from '../views/datosConductor.vue'
+import datosCliente from '../views/datosCliente.vue'
+import historialView from '../views/historialView.vue'
+import pqrsView from '../views/pqrsView.vue'
+import signIn from '../views/signIn.vue'
+import manifiestoView from '../views/manifiestoView.vue'
+import perfilView from '../views/perfilView.vue'
+import masDatosConductores from '../views/masDatosConductores.vue'
+
+/* Views importados*/
+
+
+
+
+
+
+
+
 
 const routes = [
+
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'ConductoresView',
+    component: ConductoresView
+  },
+
+  {
+    path: '/solicitudConductores',
+    name: 'solicitudConductores',
+    component:solicitudConductores
+    /* component: () => import(/* webpackChunkName: "about" * ) */
+  },
+
+  {
+    path: '/datosConductor',
+    name: 'datosConductor',
+    component: datosConductor
+  },
+
+  {
+    path: '/datosCliente',
+    name: 'datosCliente',
+    component: datosCliente
+  },
+
+  {
+    path: '/historialView',
+    name: 'historialView',
+    component: historialView
+  },
+
+  {
+    path: '/pqrsView',
+    name: 'pqrsView',
+    component: pqrsView
+  },
+
+  {
+    path: '/signIn',
+    name: 'signIn',
+    component: signIn
+  },
+
+  {
+    path: '/manifiestoView',
+    name: 'manifiestoView',
+    component: manifiestoView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/perfilView',
+    name: 'perfilView',
+    component: perfilView
+  },
+  {
+    path: '/masDatosConductores',
+    name: 'masDatosConductores',
+    component: masDatosConductores
+  },
+
+  
+
 ]
 
 const router = createRouter({
